@@ -55,11 +55,11 @@ def can_find_the_first_item_from_the_database_using_id
 end
 
 def can_find_by_multiple_attributes
-  Movie.find_by(title: "Title", release_date: 2000, director: "Me")
   # Movie.Search Values:
   # title == "Title"
   # release_date == 2000
   # director == "Me"
+  Movie.find_by(title: "Title", release_date: 2000, director: "Me")
 end
 
 def can_find_using_where_clause_and_be_sorted
@@ -71,9 +71,9 @@ end
 def can_be_found_updated_and_saved
   # Updtate the title "Awesome Flick" to "Even Awesomer Flick", save it, then return it
   Movie.create(title: "Awesome Flick")
-  __
-  __
-  __
+  Movie.update(title: "Even Awesomer Flick")
+  Movie.save
+  Movie
 end
 
 def can_update_using_update_method
